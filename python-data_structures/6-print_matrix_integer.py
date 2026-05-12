@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    for i, inner in enumerate(matrix):
+    for inner in matrix:
+        if len(inner) == 0:
+            print()
+            continue
         for j, val in enumerate(inner):
-            print("{:d}".format(val), end=" ")
-        print()
+            if j < len(inner) - 1:
+                print("{:d}".format(val), end=" ")
+            else:
+                print("{:d}".format(val))
