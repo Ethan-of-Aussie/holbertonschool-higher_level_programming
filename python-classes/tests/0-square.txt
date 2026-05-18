@@ -1,0 +1,7 @@
+>>> Square = __import__('0-square').Square
+
+>>> type(my_square)
+<class '0-square.Square'>
+
+>>> my_square.__dict__
+{}
