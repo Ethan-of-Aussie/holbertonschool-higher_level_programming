@@ -2,7 +2,10 @@
 """Square class definition"""
 
 class Square:
-"""Defines a square"""
+    """
+    Defines a square
+    """
+
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialize square with size and position"""
