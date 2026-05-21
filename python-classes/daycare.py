@@ -1,9 +1,21 @@
 #!/usr/bin/python3
 
+class RSPCA:
+    pass
 class Neighborhood:
-    def __init__(self):
-        pass
-    
+    count = 0
+    def __init__(self, daycare):
+        self.daycare = daycare
+    @property
+    def daycare(self):
+        return self.__daycare
+
+    @daycare.setter
+    def daycare(self, daycare):
+        
+    @daycare.setter
+    def __del__(self):
+        print("{self.daycare} THE DAYCARE BLEW UP") 
 class Daycare:
     def __init__(self, animals):
         self.animals = animals
@@ -46,9 +58,7 @@ class Animal:
 
     def __str__(self):
         fullstring = ""
-        for i,
-        if self.__species == "cat":
-            fullstring += dog + self.__name
+        fullstring += self.__SPEECH[self.__species] + self.__name
         return fullstring
     
     @property
