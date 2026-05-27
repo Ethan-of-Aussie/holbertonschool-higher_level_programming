@@ -57,4 +57,4 @@ TypeError: age must be an integer
 >>> bg.integer_validator("age", None)
 Traceback (most recent call last):
 ...
-ValueError: age must be an integer
+TypeError: age must be an integer
