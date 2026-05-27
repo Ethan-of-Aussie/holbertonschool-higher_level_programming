@@ -27,32 +27,32 @@ ValueError: distance must be greater than 0
 >>> bg.integer_validator()
 Traceback (most recent call last):
 ...
-TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: integer_validator() missing 2 required arguments: 'name' and 'value'
 
 >>> bg.integer_validator("width")
 Traceback (most recent call last):
 ...
-TypeError: integer_validator() missing 1 required positional argument: 'value'
+TypeError: integer_validator() missing 1 required argument: 'value'
 
->>> bg.integer_validator(("tuple",), (4,))
+>>> bg.integer_validator(("age",, (4,))
 Traceback (most recent call last):
 ...
-TypeError: 'name' and 'value' must not be a tuple
+TypeError: 'value' must not be a tuple
 
->>> bg.integer_validator(["list"], [4])
+>>> bg.integer_validator("list", [4])
 Traceback (most recent call last):
 ...
-TypeError: 'name' and 'value' must not be a list
+TypeError: 'value' must not be a list
 
 >>> bg.integer_validator("age", True)
 Traceback (most recent call last):
 ...
 ValueError: 'value' must not be a boolen
 
->>> bg.integer_validator({"age"}, {3, 4})
+>>> bg.integer_validator("age", {3, 4})
 Traceback (most recent call last):
 ...
-TypeError: 'name' and 'value' must not be a dictionary
+TypeError: 'value' must not be a dictionary
 
 >>> bg.integer_validator("age", None)
 Traceback (most recent call last):
