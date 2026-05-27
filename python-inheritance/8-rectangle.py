@@ -4,12 +4,12 @@
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     Represents a rectangle using width and height.
     Inherits from BaseGeometry for validation.
     """
-
 
     def __init__(self, width, height):
         self.integer_validator("width", width)
