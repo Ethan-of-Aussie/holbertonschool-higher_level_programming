@@ -37,24 +37,24 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> bg.integer_validator("age", (4,))
 Traceback (most recent call last):
 ...
-TypeError: 'value' must not be a tuple
+TypeError: age must be an integer
 
 >>> bg.integer_validator("list", [4])
 Traceback (most recent call last):
 ...
-TypeError: 'value' must not be a list
+TypeError: age must be an integer
 
 >>> bg.integer_validator("age", True)
 Traceback (most recent call last):
 ...
-ValueError: 'value' must not be a boolen
+ValueError: age must be an integer
 
 >>> bg.integer_validator("age", {3, 4})
 Traceback (most recent call last):
 ...
-TypeError: 'value' must not be a dictionary
+TypeError: age must be an integer
 
 >>> bg.integer_validator("age", None)
 Traceback (most recent call last):
 ...
-ValueError: must not be None
+ValueError: age must be an integer
