@@ -32,7 +32,7 @@ class Circle(Shape):
 
     @radius.setter
     def radius(self, value):
-        self.__radius = value
+        self.__radius = abs(value)
 
     def area(self):
         return pi * (self.__radius * self.__radius)
