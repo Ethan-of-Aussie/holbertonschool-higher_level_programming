@@ -5,6 +5,6 @@
 def read_file(filename=""):
     """function that reads a text file (UTF8) and prints it to stdout."""
     with open(filename, 'r', encoding="utf-8") as f:
-        for l in f:
-            line = l.rstrip('\n')
+        for line in f:
+            line = line.rstrip('\n')
             print(line)
