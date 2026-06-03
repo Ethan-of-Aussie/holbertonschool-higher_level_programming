@@ -11,6 +11,6 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         return {key: val for key, val in self.__dict__.items() if key in attrs}
