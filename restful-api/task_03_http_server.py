@@ -11,7 +11,7 @@ class httpsub(http.server.BaseHTTPRequestHandler):
         try:
             if self.path == "/data":
                 self.send_response(200)
-                self.send_header("Content-type", "application/json")
+                self.send_header("Content-Type", "application/json")
                 self.end_headers()
 
                 data = {"name": "John", "age": 30, "city": "New York"}
@@ -39,7 +39,7 @@ class httpsub(http.server.BaseHTTPRequestHandler):
                 info = {"version": "1.0", "description": "A simple API built with http.server"}
                 self.wfile.write(json.dumps(info).encode())
                 return
-            self.send_error(404, "endpoint not found")
+            self.send_error(404, "Endpoint not found")
 
         except Exception as e:
             self.send_error(500, f"server error: {e}")
