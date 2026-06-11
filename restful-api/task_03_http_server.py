@@ -17,20 +17,20 @@ class httpsub(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(data).encode())
             return
 
-        if self.path == "/status":
+        elif self.path == "/status":
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(b'{"status":"OK"}')
+            self.wfile.write(b'{"status": "OK"}')
             return
 
-        if self.path == "/":
+        elif self.path == "/":
             self.send_response(200)
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Hello, this is a simple API!")
             return
-        if self.path == "/info":
+        elif self.path == "/info":
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
