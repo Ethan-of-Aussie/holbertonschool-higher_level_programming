@@ -14,7 +14,7 @@ class httpsub(http.server.BaseHTTPRequestHandler):
             self.end_headers()
 
             data = {"name": "John", "age": 30, "city": "New York"}
-            self.wfile.write(json.dumps(data.encode())
+            self.wfile.write(json.dumps(data).encode())
             return
 
         elif self.path == "/status":
