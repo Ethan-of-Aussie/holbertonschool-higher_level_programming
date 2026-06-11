@@ -6,7 +6,7 @@ import csv
 
 
 def fetch_and_print_posts():
-     url = "https://intranet.hbtn.io/rltoken/Ut3d3Tzd0l_sH0evg3GiMg"
+     url = "https://jsonplaceholder.typicode.com/posts"
      response = requests.get(url)
 
      print(f"Status Code: {response.status_code}")
@@ -15,6 +15,7 @@ def fetch_and_print_posts():
          posts = response.json()
          for post in posts:
              print(post["title"])
+
 def fetch_and_save_posts():
     url = "https://jsonplaceholder.typicode.com/posts"
     response = requests.get(url)
@@ -26,6 +27,12 @@ def fetch_and_save_posts():
         for post in posts:
             list_posts.append({
                 "id": post["id"],
-                "title": post["title"]
-                "body": post["body"]
+                 "title": post["title"],
+                 "body": post["body"]
             })
+        with open('posts.csv', 'w') as csvfile:
+             fieldnames = ['id', 'title', 'body']
+             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+             writer.writeheader()
+             writer.writerows(list_posts)
