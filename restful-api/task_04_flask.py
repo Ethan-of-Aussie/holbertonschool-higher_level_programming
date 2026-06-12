@@ -20,7 +20,7 @@ def data():
 def status():
     return "OK"
 
-@app.route('/user/<username>')
+@app.route('/users/<username>')
 def userroute(username):
     if username not in users:
         return jsonify({"error": "User not found"}), 404
