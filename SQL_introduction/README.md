@@ -1,0 +1,1 @@
+Getting into STRUCTURED QUERY LANGUAGE to perform data ops!
