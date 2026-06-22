@@ -1,0 +1,5 @@
+# SQL - More queries
+
+- YAY MORE SQL!!!!!!!!!!
+
+- NONE OF THIS WILL STICK IN ME BRAIIIIIIIIIIIN
