@@ -1,4 +1,7 @@
 -- Cities of California
-SELECT * FROM hbtn_0d_usa.states;
-WHERE states.name = 'California'
-ORDER BY id;
+SELECT cities.id, cities.name
+FROM cities
+WHERE cities.state_id = (
+      SELECT id FROM status WHERE name = 'California'
+)
+ORDER BY cities.id ASC;
