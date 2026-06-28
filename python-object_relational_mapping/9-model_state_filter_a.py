@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Lists all State objects that contain the letter 'a' in their name."""
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
