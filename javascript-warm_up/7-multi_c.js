@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
 for (let i = 0; i < Number(process.argv[2]); i++) {
-    console.log('C is fun');
+  console.log('C is fun');
 }
